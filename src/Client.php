@@ -515,7 +515,7 @@ class Client
             $scheme,
             $authority,
             $path,
-            build_query($params),
+            \GuzzleHttp\Psr7\Query::Build($params),
             $fragment
         );
         return $uri;
